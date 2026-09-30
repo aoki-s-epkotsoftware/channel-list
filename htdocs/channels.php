@@ -21,7 +21,8 @@ $channels = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <h1>カテゴリ名</h1>
     <table>
-        <?php foreach ($channels as $channel): ?>
+        <?php foreach ($channels as $channel):
+            $id = $channel['id'];?>
             <!-- あとでjsで一行のどこをクリックしてもリンクできるようにする -->
             <tr>
                 <td>
@@ -33,6 +34,9 @@ $channels = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <a href="https://www.youtube.com/channel/<?= $channel['channel_id']; ?>">
                         <?= $channel['channel_name']; ?>
                     </a>
+                </td>
+                <td>
+                    <a href="channel_delete.php?id=<?= $id; ?>">削除</a>
                 </td>
         <?php endforeach; ?>
     </table>
