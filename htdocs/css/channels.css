@@ -1,0 +1,14 @@
+table {
+  width: 700px;
+  border: 1px solid;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+td {
+  border-bottom: 1px solid;
+}
+
+#channel-icon img{
+  width: 70px;
+  height: auto;
+}
